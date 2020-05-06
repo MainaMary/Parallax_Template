@@ -1,0 +1,95 @@
+*{
+	margin: 0px;
+	padding: 0px;
+	top: 0px;
+	box-shadow:border-box;
+	
+}
+body{
+	 font-family: lato;
+	 height: 100%;
+	line-height: 1.8em
+	font-weight:300;
+	color: #666;
+
+}
+.parallax_image1{
+	background-image: url(images/nature.jpg);
+	min-height: 800px;
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-attachment: fixed;
+}
+.parallax_image2{
+	background-image: url(images/roses.jpg);
+	/*background-repeat: no-repeat;*/
+	min-height: 500px;
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+
+	/*fixed value = parallax
+	scroll  = normal*/
+	background-attachment: fixed;
+}
+.parallax_image3{
+	background-image: url(images/sunflower.jpg);
+	/*background-repeat: no-repeat;*/
+	min-height: 500px;
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-attachment: fixed;
+}
+.section_one{
+	text-align: center;
+	padding: 10px 50px;
+}
+h1{
+	align-items: center;
+	text-align: center;
+	font-weight: bold;
+	color: #000;
+}
+.sub_part11{
+	width: 200px;
+	height: 20px;
+	top: 40%;
+	margin-left: 20%;
+	color: #fff;
+	background-color: #000;
+	/*position: absolute;*/
+	padding: 30px;
+	letter-spacing: 4px;
+	text-transform: uppercase;
+	position: relative;
+	animation-name: mytitle;
+    animation-duration: 2s;
+	animation-fill-mode: forwards;
+    transition:transform 1s ;
+	transition-timing-function: ease-in-out;
+
+}
+@keyframes mytitle{
+	0%{left: -100px;}
+   100%{left: 20%;}
+}
+.sub_part11:hover{
+ background-color: #800;
+ transform: rotateY(180deg);
+}
+@media(max-width: 600px){
+	.parallax_image1, .parallax_image2, .parallax_image3{
+		background-attachment: scroll;
+	}
+	.sub_part11{
+		background-color: purple;
+		margin-left:10%;
+	}
+}
+@media(max-width: 385px){
+	.sub_part11{
+		margin-left: 5%;
+	}
+}
